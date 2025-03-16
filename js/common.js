@@ -267,7 +267,28 @@ function drawHpBar(x, y, width, height, hp, maxHp) {
     ctx.fillText(hp, x + width + 5, y + height / 2 + 5);
 }
 
-function updateUnits() {
+function drawTrayBar(x, y, width, height)
+{
+    // Background (empty part of the bar)
+    ctx.fillStyle = 'orange';
+    ctx.fillRect(x, y, width, height);
+    
+    let fillWidth = tray.length>0?width * (tFrames-Date.now())/troopTimes[tray[0]]:0;
+    ctx.fillStyle = 'grey';
+    ctx.fillRect(x, y, fillWidth, height);
+    
+    // Black border
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(x, y, width, height);
+	for(let i=0; i<5; i++)
+	{
+		ctx.fillStyle = i<tray.length?"grey":'orange';
+		ctx.fillRect(x+i*25, y+25, 20, height);
+	}
+}
+
+function doOneFrame() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
 	eUpdate();
     updateTroops(playerTroops);
@@ -286,6 +307,7 @@ function updateUnits() {
 	bullets=bullets.filter(b=>!b.hit);
 	drawHpBar(0, 250, 20, 100, base1hp, base1maxHp);
 	drawHpBar(1450, 250, 20, 100, base2hp, base2maxHp);
-    requestAnimationFrame(updateUnits); // Keep updating
+	drawTrayBar(500, 0, 100, 20);
+    requestAnimationFrame(doOneFrame); // Keep updating
 }
-updateUnits();
+doOneFrame();
