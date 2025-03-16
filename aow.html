@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head><title>Age of War</title></head>
+<body>
+<div style="position: relative;">
+    <canvas id="gameCanvas" width="1577" height="504" style="background: url('sprites/bg.png');"></canvas>
+    <img id="base1" src="sprites/bases/0.png" style="
+        position: absolute;
+        top: 315px;
+    "/>
+	<img id="sel0" src="" onClick="selectSlot(this.id)" style="
+        position: absolute;
+        bottom: 118px;
+		left: 67px;
+    "/>
+	<img id="tur0" src="" onClick="sell(this.id)" style="
+        position: absolute;
+        bottom: 118px;
+		left: 40px;
+    "/>
+	<img id="spot1" src="" style="
+        position: absolute;
+        bottom: 148px;
+		left: 50px;
+    "/>
+	<img id="sel1" src="" onClick="selectSlot(this.id)" style="
+        position: absolute;
+        bottom: 165px;
+		left: 67px;
+    "/>
+	<img id="tur1" src="" onClick="sell(this.id)" style="
+        position: absolute;
+        bottom: 163px;
+		left: 40px;
+    "/>
+	<img id="spot2" src="" style="
+        position: absolute;
+        bottom: 190px;
+		left: 50px;
+    "/>
+	<img id="sel2" src="" onClick="selectSlot(this.id)" style="
+        position: absolute;
+        bottom: 207px;
+		left: 67px;
+    "/>
+	<img id="tur2" src="" onClick="sell(this.id)" style="
+        position: absolute;
+        bottom: 205px;
+		left: 40px;
+    "/>
+	<img id="spot3" src="" style="
+        position: absolute;
+        bottom: 232px;
+		left: 50px;
+    "/>
+	<img id="sel3" src="" onClick="selectSlot(this.id)" style="
+        position: absolute;
+        bottom: 249px;
+		left: 67px;
+    "/>
+	<img id="tur3" src="" onClick="sell(this.id)" style="
+        position: absolute;
+        bottom: 247px;
+		left: 40px;
+    "/>
+    <img id="base2" src="sprites/bases/0.png" style="
+        position: absolute;
+        top: 315px;
+		right: -55px;
+		transform: scaleX(-1);
+    "/>
+	<img id="eTur0" src="" style="
+        position: absolute;
+        bottom: 118px;
+		right: -20px;
+		transform: scaleX(-1);
+    "/>
+	<img id="eSpot1" src="" style="
+        position: absolute;
+        bottom: 148px;
+		right: -10px;
+    "/>
+	<img id="eTur1" src="" style="
+        position: absolute;
+        bottom: 163px;
+		right: -20px;
+		transform: scaleX(-1);
+    "/>
+	<img id="eSpot2" src="" style="
+        position: absolute;
+        bottom: 190px;
+		right: -10px;
+    "/>
+	<img id="eTur2" src="" style="
+        position: absolute;
+        bottom: 205px;
+		right: -20px;
+		transform: scaleX(-1);
+    "/>
+	<img id="eSpot3" src="" style="
+        position: absolute;
+        bottom: 232px;
+		right: -10px;
+    "/>
+	<img id="eTur3" src="" style="
+        position: absolute;
+        bottom: 247px;
+		right: -20px;
+		transform: scaleX(-1);
+    "/>
+</div>
+<script src="js/bullet.js"></script>
+<script src="js/1.js"></script>
+<script src="js/2.js"></script>
+<script src="js/3.js"></script>
+<script src="js/4.js"></script>
+<script src="js/5.js"></script>
+<script src="js/6.js"></script>
+<script src="js/7.js"></script>
+<script src="js/8.js"></script>
+<script src="js/9.js"></script>
+<script src="js/10.js"></script>
+<script src="js/11.js"></script>
+<script src="js/12.js"></script>
+<script src="js/13.js"></script>
+<script src="js/14.js"></script>
+<script src="js/15.js"></script>
+<script src="js/16.js"></script>
+<script src="js/turret.js"></script>
+Cash: <div id="cash" style="display: inline;">175</div><br/>
+Experience: <div id="xp" style="display: inline;">0</div><br/>
+<img id="0" src="buttons/troops/0.png" onClick="buyUnit(this.id)"/>
+<img id="1" src="buttons/troops/1.png" onClick="buyUnit(this.id)"/>
+<img id="2" src="buttons/troops/2.png" onClick="buyUnit(this.id)"/>
+<img id="3" src="" onClick="buyUnit(this.id)"/><br/>
+<img id="t0" src="buttons/turrets/0.png" onClick="selectTurret(this.id)"/>
+<img id="t1" src="buttons/turrets/1.png" onClick="selectTurret(this.id)"/>
+<img id="t2" src="buttons/turrets/2.png" onClick="selectTurret(this.id)"/><br/>
+<img src="buttons/sellTurret.png" onClick="startSelling()"/>
+<img src="buttons/addTurretSpot.png" onClick="addSpot()"/>
+<img src="buttons/evolve.png" onClick="evolve()"/><br/><br/>
+<img id="special" src="buttons/specials/0.png" onClick="useSpecial()"/>
+<script src="js/enemy.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
